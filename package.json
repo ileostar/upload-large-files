@@ -1,0 +1,9 @@
+{
+  "name": "upload-large-files",
+  "author": "ileostar <https://github.com/ileostar>",
+  "license": "MIT",
+  "scripts": {
+    "dev:api": "pnpm -F api start:dev",
+    "dev:web": "pnpm -F web dev"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":automergeMinor",
+    ":separateMajorReleases",
+    ":separatePatchReleases",
+    ":semanticCommitScopeDisabled",
+    ":pinVersions",
+    ":rebaseStalePrs",
+    ":prHourlyLimitNone",
+    ":ignoreModulesAndTests",
+    ":updateNotScheduled",
+    ":automergeRequireAllStatusChecks",
+    ":maintainLockFilesDisabled",
+    "config:recommended",
+    ":dependencyDashboard"
+  ],
+  "dependencyDashboard": true,
+  "prHourlyLimit": 1,
+  "prConcurrentLimit": 1,
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "automerge": true
+    }
+  ],
+  "npmrc": ".npmrc",
+  "baseBranches": ["main"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": ["schedule:weekly", "group:allNonMajor"]
+  }
+}
